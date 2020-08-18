@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { PostAuthor } from './PostAuthor'
 import { article } from 'txtgen'
 import { TimeAgo } from './TimeAgo'
+import { ReactionButtons } from './ReactionButtons'
 
 export const SinglePagePost = ({ match }) => {
   const { postId } = match.params
@@ -28,6 +29,7 @@ export const SinglePagePost = ({ match }) => {
         <Link to={`/editPost/${post.id}`} className="button">
           Edit Post
         </Link>
+        <ReactionButtons post={post} />
       </article>
     </section>
   )
